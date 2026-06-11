@@ -6,5 +6,5 @@ export default defineConfig({
   // server: {
   //   port: 4173,
   // },
-  base: '/web-portofolio/',
+  base: '/naufal-portofolio/',
 });
