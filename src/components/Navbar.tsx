@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Download, ArrowUpRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import DarkModeToggle from './DarkModeToggle';
-import { siteMetadata } from '../data/siteMetadata';
+import { withBaseUrl } from '../utils/assetPaths';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -21,6 +21,8 @@ const Navbar = ({ theme, setTheme }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState('#home');
   const [openMenu, setOpenMenu] = useState(false);
+  const logoUrl = withBaseUrl('icons/logo.png');
+  const homeHref = `${import.meta.env.BASE_URL}#home`;
 
   useEffect(() => {
     const onScroll = () => {
@@ -50,8 +52,8 @@ const Navbar = ({ theme, setTheme }: NavbarProps) => {
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition duration-300 ${isScrolled ? 'border-b border-slate-200/80 bg-white/90 backdrop-blur-xl shadow-sm dark:border-slate-800/80 dark:bg-slate-950/95' : 'bg-transparent'}`}>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="#home" className="flex items-center gap-3 text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
-          <img src="/icons/logo.png" alt="Naufal Hakim logo" className="h-16 w-16 object-contain  scale-150" />
+        <a href={homeHref} className="flex items-center gap-3 text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
+          <img src={logoUrl} alt="Naufal Hakim logo" className="h-16 w-16 object-contain  scale-150" />
         </a>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((item) => (

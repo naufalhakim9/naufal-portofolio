@@ -10,6 +10,7 @@ import { certifications } from '../data/certifications';
 import { projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard';
 import ContactForm from '../components/ContactForm';
+import { withBaseUrl } from '../utils/assetPaths';
 
 const animatedTitles = ['Data Analyst', 'Data Engineer', 'BI Developer'];
 
@@ -22,6 +23,7 @@ const stats = [
 const HomePage = () => {
   const [text, setText] = useState('');
   const [activeIndex, setActiveIndex] = useState(0);
+  const profileImageUrl = withBaseUrl('icons/naufal.png');
 
   const isImageIcon = (value: string) => /^\//.test(value) || /^https?:\/\//.test(value) || value.startsWith('data:');
 
@@ -87,7 +89,7 @@ const HomePage = () => {
             <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.18),_transparent_40%)]" />
             <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-6 rounded-[2rem] border border-white/80 bg-white/80 p-8 text-center shadow-2xl backdrop-blur-sm dark:border-slate-700/80 dark:bg-slate-900/80">
               <div className="h-40 w-40 overflow-hidden rounded-full shadow-xl">
-                <img src="/icons/naufal.png" alt={siteMetadata.name} className="h-full w-full object-cover" />
+                <img src={profileImageUrl} alt={siteMetadata.name} className="h-full w-full object-cover" />
               </div>
               <div>
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-500 dark:text-slate-400">Data Enthusiast</p>

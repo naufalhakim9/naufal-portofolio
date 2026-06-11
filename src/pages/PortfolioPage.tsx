@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard';
@@ -53,9 +53,9 @@ const PortfolioPage = () => {
             onChange={(e) => setSearch(e.target.value)}
             className="w-full rounded-3xl border border-slate-200 bg-white px-5 py-4 text-sm text-slate-900 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100"
           />
-          <a href="/#projects" className="inline-flex items-center justify-center rounded-3xl bg-primary-600 px-6 py-4 text-sm font-semibold text-white transition hover:bg-primary-700">
+          <Link to="/#projects" className="inline-flex items-center justify-center rounded-3xl bg-primary-600 px-6 py-4 text-sm font-semibold text-white transition hover:bg-primary-700">
             Back to Home
-          </a>
+          </Link>
         </div>
 
         <div className="mb-8 flex flex-wrap gap-3">

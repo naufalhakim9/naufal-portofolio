@@ -1,6 +1,6 @@
-export type ProjectCategory = 'Data Analytics' | 'Data Visualization' | 'Data Engineering' | 'Business Intelligence' | 'Web Development';
+import { withBaseUrl } from '../utils/assetPaths';
 
-const educationDashboardThumbnail = new URL('../images/projects/1.png', import.meta.url).href;
+export type ProjectCategory = 'Data Analytics' | 'Data Visualization' | 'Data Engineering' | 'Business Intelligence' | 'Web Development';
 
 export interface Project {
   id: string;
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     description: 'Dashboard Power BI yang membantu stakeholder memantau performance-tracker secara berkala.',
     category: 'Data Visualization',
     tags: ['Power BI', 'Excel', 'Data Modeling', 'DAX'],
-    thumbnail: '/images/projects/4.png',
+    thumbnail: withBaseUrl('images/projects/4.png'),
     featured: true,
     order: 1,
     problemStatement: 'Dashboard ini dibuat untuk menyederhanakan analisis tersebut dalam satu tampilan visual yang informatif.',
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     description: 'Dashboard Power BI yang membantu stakeholder memantau income, expenses, dan savings secara berkala.',
     category: 'Business Intelligence',
     tags: ['Power BI', 'Excel', 'Data Modeling', 'DAX'],
-    thumbnail: '/images/projects/2.png',
+    thumbnail: withBaseUrl('images/projects/2.png'),
     featured: true,
     order: 1,
     problemStatement: 'Mengelola keuangan sering kali menjadi sulit karena: Data pemasukan, pengeluaran, dan tabungan tersebar.',
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     description: 'Dashboard Power BI yang membantu stakeholder memantau tren pasien, pendapatan, dan performa layanan medis.',
     category: 'Business Intelligence',
     tags: ['Power BI', 'Excel', 'Data Modeling', 'DAX'],
-    thumbnail: '/images/projects/5.png',
+    thumbnail: withBaseUrl('images/projects/5.png'),
     featured: true,
     order: 2,
     problemStatement: 'Rumah sakit kesulitan memantau performa operasional dan melihat tren pasien secara cepat.',
@@ -81,7 +81,7 @@ export const projects: Project[] = [
       'Dashboard ini dibuat untuk menganalisis performa penjualan pizza berdasarkan kategori produk, ukuran pizza, tren pendapatan, dan perilaku pemesanan pelanggan. Dashboard membantu bisnis restoran dalam memonitor revenue, mengetahui produk terlaris, serta memahami kontribusi setiap kategori pizza terhadap total penjualan.',
     category: 'Data Analytics',
     tags: ['Excel', 'Pivot Table', 'Pivot Chart', 'Slicer'],
-    thumbnail: '/images/projects/6.png',
+    thumbnail: withBaseUrl('images/projects/6.png'),
     featured: true,
     order: 3,
     problemStatement: 'Kesulitan menentukan kategori produk dengan kontribusi margin tertinggi.',
@@ -99,7 +99,7 @@ export const projects: Project[] = [
       'Dashboard ini dibuat untuk memonitor dan menganalisis data sumber daya manusia (Human Resources) dalam sebuah perusahaan. Dashboard membantu tim HR dan manajemen dalam memahami kondisi workforce, tingkat attrition, pertumbuhan karyawan, diversity, stabilitas karyawan, hingga distribusi karyawan berdasarkan department dan job level.',
     category: 'Data Engineering',
     tags: ['Excel', 'Pivot Table', 'Pivot Chart', 'Slicer'],
-    thumbnail: '/images/projects/7.png',
+    thumbnail: withBaseUrl('images/projects/7.png'),
     featured: true,
     order: 4,
     problemStatement: 'Dashboard dibuat untuk menjawab beberapa pertanyaan bisnis utama.',
@@ -116,7 +116,7 @@ export const projects: Project[] = [
     description: 'Analisis difokuskan pada status kelulusan, nilai UTS & UAS, perbandingan gender, mata pelajaran, serta evaluasi pengajar guna membantu institusi pendidikan dalam pengambilan keputusan berbasis data.',
     category: 'Data Visualization',
     tags: ['Power BI', 'Excel', 'Data Modeling', 'DAX'],
-    thumbnail: '/images/projects/1.png',
+    thumbnail: withBaseUrl('images/projects/1.png'),
     featured: true,
     order: 5,
     problemStatement: 'Dashboard ini dikembangkan untuk menjawab kebutuhan tersebut melalui visualisasi yang informatif dan mudah dipahami.',
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     description: 'Analisis difokuskan pada status kelulusan, nilai UTS & UAS, perbandingan gender, mata pelajaran, serta evaluasi pengajar guna membantu institusi pendidikan dalam pengambilan keputusan berbasis data.',
     category: 'Data Visualization',
     tags: ['Power BI', 'Excel', 'Data Modeling', 'DAX'],
-    thumbnail: '/images/projects/8.png',
+    thumbnail: withBaseUrl('images/projects/8.png'),
     featured: true,
     order: 6,
     problemStatement: 'Dashboard ini dikembangkan untuk menjawab kebutuhan tersebut melalui visualisasi yang informatif dan mudah dipahami.',
